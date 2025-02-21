@@ -30,7 +30,11 @@ public class EjemploJavaUtilDateParse {
                 System.out.println("Son iguales");
             }
         } catch (ParseException e) {
-            throw new RuntimeException(e);
+           // throw new RuntimeException(e);
+            System.err.println("Laa fecha tiene un formato incorrecto:"+e.getMessage());
+            System.err.println("El formato debe ser yyyy-MM-dd");
+            System.exit(1);
+            //main(args);
         }
     }
 }
